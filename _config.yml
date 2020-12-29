@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Tanja Radović"
-  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/tanja-radovic.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Kragujevac, Serbia"
   email            :
