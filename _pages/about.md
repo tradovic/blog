@@ -1,11 +1,11 @@
 ---
 title: "About Me"
 permalink: /about/
-layout: splash
+layout: about
 description: This is what I do.
 header:
 
-  overlay_image: /assets/images/h1_hero.jpg
+  image: /assets/images/h1_hero.jpg
 ---
 
 
