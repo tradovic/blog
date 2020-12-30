@@ -1,7 +1,7 @@
 ---
 title: "Web Scraping"
 header:
-  image: /assets/images/python-webscraping.jpeg
+  image: /assets/images/python-webscraping.jpg
 categories:
   - Python
 tags:
