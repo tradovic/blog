@@ -113,11 +113,11 @@ dc.plotHistogram()
 ```
 
 
-![png](output_2_0.png)
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_2_0.png)
 
 
 
-![png](output_2_1.png)
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_2_1.png)
 
 
 
