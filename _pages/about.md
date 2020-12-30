@@ -1,6 +1,7 @@
 ---
 title: "About"
-permalink: /about-a/
+permalink: /about/
+layout: posts
 date: 2020-06-23T18:38:52+00:00
 ---
 
