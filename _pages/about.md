@@ -5,7 +5,7 @@ layout: splash
 description: This is what I do.
 header:
 
-  overlay_image: /assets/images/h1-hero.jpg
+  overlay_image: /assets/images/h1_hero.jpg
 ---
 
 
