@@ -1,7 +1,9 @@
 ---
-title: "About"
+title: "About Me"
 permalink: /about/
 layout: splash
+description: This is what I do.
+background: '/assets/images/h1-hero.jpg'
 date: 2020-06-23T18:38:52+00:00
 ---
 
