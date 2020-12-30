@@ -1,7 +1,5 @@
 ---
 title: "Web Scraping"
-header:
-  image: /assets/images/python-webscraping.jpg
 categories:
   - Python
 tags:
@@ -9,6 +7,8 @@ tags:
   - python
   - programming
 ---
+![Web Scraping]({{ site.url }}{{ site.baseurl }}/assets/images/python-webscraping.jpg)
+
 Kada radimo na nekom Data Science projektu, uobičajeno je da želimo da koristimo podatke koji se nalaze na internetu. Obično te podatke nalazimo u csv formatu ili preko Application Programming Interface (API). Međutim, postoje slučajevi kada se podacima kojima nam trebaju može pristupiti samo kao deo Web stranice. U ovakvim slučajevima možemo da koristimo tehniku koja se naziva Web scraping, da bismo dobili podatke sa Web stranice u format sa kojim možemo raditi u našoj analizi.
 Web scraping je tehnika kojom se automatski pristupa i izdvaja velika količina informacija sa web stranice, što može uštedeti ogromnu količinu vremena i truda.
 
