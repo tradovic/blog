@@ -8,6 +8,7 @@ tags:
   - programming
 ---
 
+Primena K-means algoritma za ekstrakciju boja sa slike
 
 ```python
 import matplotlib.pyplot as plt
