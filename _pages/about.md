@@ -5,7 +5,7 @@ layout: about
 description: This is what I do.
 header:
 
-  image: /assets/images/h1_hero.jpg
+  overlay_image: /assets/images/h1_hero.jpg
 ---
 
 
