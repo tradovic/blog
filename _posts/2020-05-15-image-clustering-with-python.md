@@ -104,24 +104,20 @@ class DominantColors:
 ```python
 img = 'images/fabric-freshtex-light.jpg'
 clusters = 5
-#display chart
 image = mpimg.imread(img)
 plt.imshow(image)
 plt.show()
+```
+
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_2_0.png)
+
+
+```python
 dc = DominantColors(img, clusters)
 colors = dc.dominantColors()
 dc.plotHistogram()
 ```
 
-
-![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_2_0.png)
-
-
-
 ![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_2_1.png)
 
 
-
-```python
-
-```
