@@ -1,7 +1,7 @@
 ---
 title: "About"
 permalink: /about/
-layout: posts
+layout: splash
 date: 2020-06-23T18:38:52+00:00
 ---
 
