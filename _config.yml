@@ -278,7 +278,7 @@ defaults:
       read_time: true
       comments: # true
       share: false # true
-      related: true
+      related: false # true
   # _pages
   - scope:
       path: "_pages"
