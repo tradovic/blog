@@ -3,4 +3,5 @@ main:
   - title: "About"
     url: /about/
   - title: "Posts"
-    url: /category-archive-grid/
+    url: /categories-grid/
+
