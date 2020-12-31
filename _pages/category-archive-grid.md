@@ -2,7 +2,7 @@
 title: "Posts by Category"
 author_profile: true
 layout: categories
-permalink: /categories-grid/
+permalink: /categories/
 entries_layout: grid
 
 ---
