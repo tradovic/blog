@@ -20,7 +20,7 @@ title                    : "Data Mosaic"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Tanja Radović"
-description              : "Data Mosaic."
+description              : "Personal website of Tanja Radović, computer science engineer working as a web developer."
 url                      : "https://tradovic.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
 repository               : "tradovic/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
