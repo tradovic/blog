@@ -16,7 +16,7 @@ We can use ImageFont and ImageDraw to insert text to an image using Python
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw 
-img_sample = 'csv_files/psili_ammos.jpeg'
+img_sample = 'images/psili_ammos.jpeg'
 img = Image.open(img_sample)
 draw = ImageDraw.Draw(img)
 # font = ImageFont.truetype(<font-file>, <font-size>)
@@ -34,7 +34,7 @@ img.show()
 
 The above code writes “Psili Ammos - Thassos” text to the existing image called psili_ammos-out.jpg
 
-To create new blank white image and then add the black text to it, let change a little bit
+To create new blank violet image and then add the text to it, let change a little bit
 
 ```python
 from PIL import Image
