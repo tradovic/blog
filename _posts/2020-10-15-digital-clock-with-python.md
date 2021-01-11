@@ -1,5 +1,5 @@
 ---
-title: "BUILDING A DIGITAL CLOCK USING PYTHON"
+title: "Building a digital clock using Python"
 header:
   image: /assets/images/images/digital_clock.png
   og_image: /assets/images/images/digital_clock.png
