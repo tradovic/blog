@@ -1,5 +1,8 @@
 ---
 title: "BUILDING A DIGITAL CLOCK USING PYTHON"
+header:
+  image: /assets/images/images/digital_clock.png
+  og_image: /assets/images/images/digital_clock.png
 categories:
   - Python
 tags:
