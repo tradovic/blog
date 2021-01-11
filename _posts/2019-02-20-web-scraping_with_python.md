@@ -4,8 +4,6 @@ categories:
   - Python
 tags:
   - Beutifulsoup
-  - python
-  - programming
 ---
 ![Web Scraping]({{ site.url }}{{ site.baseurl }}/assets/images/python-webscraping.jpg)
 

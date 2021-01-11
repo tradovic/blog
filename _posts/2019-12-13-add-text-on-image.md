@@ -4,8 +4,6 @@ categories:
   - Python
 tags:
   - pillow
-  - python
-  - programming
 ---
 
 Add text to image using PIL, Pillow Python

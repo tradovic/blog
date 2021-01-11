@@ -4,8 +4,6 @@ categories:
   - Python
 tags:
   - kmeans
-  - python
-  - programming
 ---
 
 Primena K-means algoritma za ekstrakciju boja sa slike
