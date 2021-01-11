@@ -38,7 +38,7 @@ Now, our images are in the same size. We can move to the next step, where we wil
 
 #### Blending Images
 
-Thanks to OpenCV, we can do it in one line of code. The function that will do the blending for us is called addWeighted. You can learn more about addWeight function from here. It has 5 parameters, which can be listed as: image source 1, src1 weight, image source 2, src2 weight, gamma. The weight of each image has to be a value less than 1. Here is the blend equation:
+Thanks to OpenCV, we can do it in one line of code. The function that will do the blending for us is called addWeighted. It has 5 parameters, which can be listed as: image source 1, src1 weight, image source 2, src2 weight, gamma. The weight of each image has to be a value less than 1. Here is the blend equation:
 
 > blend = (image scr1)*(src1 weight) + (image scr2)*(src2 weight) + gamma
 
@@ -53,7 +53,7 @@ blend = cv2.addWeighted(resized_bg, 0.5, resized_fg, 0.8, 0.0)
 
 #### Exporting the Result
 
-You made it until this step, you are magnificent! Now, let’s export the final work by using the imwrite method. Here is the line to save the image as a new image file in the folder.
+Now, let’s export the final work by using the imwrite method. Here is the line to save the image as a new image file in the folder.
 
 
 ```python
