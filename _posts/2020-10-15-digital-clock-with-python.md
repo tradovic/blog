@@ -104,7 +104,4 @@ digital_clock()
 app_window.mainloop()
 ```
 
-
-```python
-
-```
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/digital_clock.png)
