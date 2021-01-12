@@ -17,8 +17,8 @@ layout: default
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
       <ul>
-        {% if author.links %}
-          {% for link in author.links %}
+        {% if site.author.links %}
+          {% for link in site.author.links %}
             {% if link.label and link.url %}
               <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
             {% endif %}
