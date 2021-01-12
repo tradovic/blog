@@ -6,17 +6,25 @@ layout: default
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author.avatar %}{{site.author.avatar}}{% endif %}" alt="{{site.name}}"></a>
+        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}{% if site.author.avatar %}{{site.author.avatar}}{% endif %}" alt="{{site.name}}"></a>
       </div>
       <div class="author-name">{{site.author.name}}</div>
       <p>{{site.author.bio}}</p>
     </div>
   </header> <!-- End Header -->
   <footer>
+
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
       <ul>
-        {% if site.social-twitter %}
+        {% if author.links %}
+          {% for link in author.links %}
+            {% if link.label and link.url %}
+              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <!-- {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-facebook %}
@@ -32,7 +40,7 @@ layout: default
         {% endif %}
         {% if site.social-email %}
           <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
-        {% endif %}
+        {% endif %} -->
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
