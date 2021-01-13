@@ -1,5 +1,6 @@
 ---
 title: "Python - Blending Two Images using OpenCV"
+img: "/assets/images/blended.png"
 categories:
   - Python
 tags:
