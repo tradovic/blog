@@ -1,5 +1,6 @@
 ---
 title: "How to add text to image using Python"
+img: "psili_ammos-out.jpg"
 categories:
   - Python
 tags:
