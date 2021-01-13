@@ -13,6 +13,33 @@ hr {
   /* 2 */
 }
 
+.wrapper {
+  max-width: 1250px;
+  position: relative;
+}
+
+.post, .article-page {
+  background-color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(38, 57, 89, 0.8);
+  color: #ffffff;
+}
+
+::selection {
+  background: rgba(38, 57, 89, 0.8);
+  color: #ffffff;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .sidebar {
