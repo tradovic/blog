@@ -1,5 +1,6 @@
 ---
 title: "Web Scraping"
+img: "python-webscraping.jpg"
 categories:
   - Python
 tags:
