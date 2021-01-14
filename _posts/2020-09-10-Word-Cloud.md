@@ -27,7 +27,7 @@ We will also need matplotlib, but this is installed automatically by wordcloud, 
 Since we've installed our packages, we might as well import them into our project.
 
 
-```
+```python
 import wikipedia
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 Now we are going to use the wikipedia package to download the text content. All we need for this is to provide the title of the page. We are going to fetch the text for the Natural Language Processing page on Wikipedia.
 
 
-```
+```python
 page = wikipedia.page("Natural Language Processing")
 text = page.content
 ```
@@ -44,7 +44,7 @@ text = page.content
 Next we can use this text to generate and display the word cloud.
 
 
-```
+```python
 def plot_cloud(wordcloud):
   plt.figure(figsize=(8, 8), facecolor=None)
   plt.imshow(wordcloud, interpolation="bilinear")
@@ -54,13 +54,13 @@ def plot_cloud(wordcloud):
 ```
 
 
-```
+```python
 wordcloud = WordCloud().generate(text)
 plot_cloud(wordcloud)
 ```
 
 
-![png](output_13_0.png)
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_13_0.png)
 
 
 Understanding this word cloud is very intuitive, you can observe that these words are very common when we read something about Natural Language Processing. Let's see another example, this time with the article about Machine Learning.
@@ -71,7 +71,7 @@ To demonstrate how easy it is, let's at least change the background color. For t
 
 
 
-```
+```python
 ml_page = wikipedia.page("MachineLearning")
 ml_text = ml_page.content
 cloud = WordCloud(background_color='white').generate(ml_text)
@@ -79,7 +79,7 @@ plot_cloud(cloud)
 ```
 
 
-![png](output_16_0.png)
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/output_16_0.png)
 
 
 ###### Removing stopwords from a word cloud
@@ -89,7 +89,7 @@ Stop words are words that are very frequently used in a given language and add a
 The wordcloud package already removes the most common stopwords for us. But if you think that your text corpus has some stop words that are not removed, you can always append new words that will be removed. Here's how:
 
 
-```
+```python
 # Additional import here
 from wordcloud import WordCloud, STOPWORDS
 ###########
@@ -103,20 +103,11 @@ cloud = WordCloud(stopwords=stopwords, background_color='white').generate(text)
 We can also save our word cloud with a single line of code.
 
 
-```
+```python
 cloud.to_file("wordcloud.png")
 ```
-
-
-
-
-    <wordcloud.wordcloud.WordCloud at 0x11a484748>
-
 
 
 That was quick! We've generated our word cloud in very few lines of code and we can use this to better understand our data whenever we work on some Natural Language Processing project.
 
 
-```
-
-```
