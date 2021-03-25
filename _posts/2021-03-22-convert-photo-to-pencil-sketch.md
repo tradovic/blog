@@ -17,8 +17,6 @@ Quick Steps:
 3. Apply a Gaussian blur to the negative from step 2.
 4. Blend the grayscale image from step 1 with the blurred negative from step 3
 
-![jpg]({{ site.url }}{{ site.baseurl }}/assets/images/background.jpg)
-
 
 
 Step 1: Find an image that we want to convert into a pencil sketch. I am going to use the image of a Mickey Mouse
