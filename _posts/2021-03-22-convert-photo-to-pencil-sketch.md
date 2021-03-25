@@ -1,6 +1,6 @@
 ---
 title: "Convert A Photo To Pencil Sketch Using Python"
-img: "blended.png"
+img: "Sketch.png"
 categories:
   - Python
 tags:
@@ -19,7 +19,7 @@ Quick Steps:
 
 ![jpg]({{ site.url }}{{ site.baseurl }}/assets/images/background.jpg)
 
-![png]({{ site.url }}{{ site.baseurl }}/assets/images/foreground.png)
+
 
 Step 1: Find an image that we want to convert into a pencil sketch. I am going to use the image of a Mickey Mouse
 
@@ -28,6 +28,7 @@ import cv2
 image = cv2.imread("input/miki_mouse.png")
 
 ```
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/miki_mouse.png)
 
 Step 2: Read in the Red, Blue, Green (RBG) image and then convert it to a grayscale image. This effectively makes the image a classic “black and white” photo. This will be our “greyscale image”.
 
@@ -36,44 +37,48 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("output/gray.png", gray_image)
 
 ```
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/gray.png)
 
-#### Resizing Images
-
-In this step, we will resize the images that we want to blend. This step can also be called preprocessing the images. We are resizing the images to make sure they are in the same size. The same size rule is required for the blend function to work properly. Otherwise, it will return an error message.
-
-```python
-
-dim = (1200, 800) 
-resized_bg = cv2.resize(bg, dim, interpolation = cv2.INTER_AREA) 
-resized_fg = cv2.resize(fg, dim, interpolation = cv2.INTER_AREA)
-
-```
-Now, our images are in the same size. We can move to the next step, where we will start the blending process. In other words, the fun part of this whole article.
-
-#### Blending Images
-
-Thanks to OpenCV, we can do it in one line of code. The function that will do the blending for us is called addWeighted. It has 5 parameters, which can be listed as: image source 1, src1 weight, image source 2, src2 weight, gamma. The weight of each image has to be a value less than 1. Here is the blend equation:
-
-> blend = (image scr1)*(src1 weight) + (image scr2)*(src2 weight) + gamma
-
-That’s the mathematics of the function. Let’s see in action:
-
+Step 3: We are going to invert the “grey scaled image” also known as getting the image negative, this will be our “inverted greyscale image”. Inversion can be used to enhance details.
 
 ```python
 
-blend = cv2.addWeighted(resized_bg, 0.5, resized_fg, 0.8, 0.0)
+inverted_image = 255 - gray_image
+cv2.imwrite("output/inv.png", inverted_image)
 
 ```
 
-#### Exporting the Result
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/inv.png)
 
-Now, let’s export the final work by using the imwrite method. Here is the line to save the image as a new image file in the folder.
+Step 4: Use a Gaussian function to blur the image. In image processing, a Gaussian blur (also known as Gaussian smoothing) is the result of blurring an image by a Gaussian function.
+
+```python
+
+blurred = cv2.GaussianBlur(inverted_image, (21, 21), 0)
+cv2.imwrite("output/blur.png", blurred)
+ 
+```
+
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/blur.png)
+
+Step 5: Invert the newly created “blurred image”, this will be called the “inverted blurred image”.
 
 
 ```python
 
-cv2.imwrite('blended.png', blend)
+inverted_blurred = 255 - blurred
+cv2.imwrite("output/invblur.png", inverted_blurred)
+
+```
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/invblur.png)
+
+Step 5: Now we are going to create the pencil sketch image by blending the “greyscale image” with the “inverted blurred image”. This can be done by dividing the “grayscale image” by the “inverted blurred image”. Since images are just arrays we can easily do this in programming by using the divide function from the cv2 library.
+
+```python
+
+pencil_sketch = cv2.divide(gray_image, inverted_blurred, scale=256.0)
+cv2.imwrite("output/Sketch.png", pencil_sketch)
 
 ```
 
-![png]({{ site.url }}{{ site.baseurl }}/assets/images/blended.png)
+![png]({{ site.url }}{{ site.baseurl }}/assets/images/Sketch.png)
