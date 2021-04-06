@@ -54,8 +54,6 @@ details = pytesseract.image_to_data(
 # print(details.keys())
 
 ```
-![png]({{ site.url }}{{ site.baseurl }}/assets/images/miki_mouse.png)
-
 Step 2: Read in the Red, Blue, Green (RBG) image and then convert it to a grayscale image. This effectively makes the image a classic “black and white” photo. This will be our “greyscale image”.
 
 ```python
